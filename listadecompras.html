@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>
+        Lista de compras
+    </title> 
+</head>
+
+<body>
+    <h1> lista de compras</h1>
+    <label>Digite os itens aqui e clique em inserir</label>
+    <input class="lista1" type="text" id="entradaUsuario">
+    <input class="lista" type="button" value="INSERIR ITEM" onclick="inserir()">
+    <p>botão para remover o último item</p>
+    <button class= btnremove onclick="Removerprimeiroitem()">Remove último</button>
+    <button class= btnremove onclick="Removerultimoitem()">Remove primeiro</button>
+    <button class=btnremove onclick="Removetudo()">Remove tudo</button>
+    <input class="lista1" type="number" id="numero-usuario">
+    <input class="lista" type="button" value="remove" onclick="Removerespecifico()">
+
+    
+    <!-- <input type="button" class="btn" id="btn-calcular" value="CALCULAR" onclick="calcula()"> -->
+    <ul id="lista">
+
+    </ul>
+
+    <br>
+    <br>
+    
+    <a href="./media.html">exercício da média </a>
+    <a href="./index.html">exercício se o número é par </a>
+
+<script>
+function inserir(){
+let itemUsuario = document.getElementById('entradaUsuario').value;
+let textNode = document.createTextNode(itemUsuario);
+
+let elementoFilhoLi = document.createElement('li');
+
+elementoFilhoLi.style.background = 'white';
+elementoFilhoLi.appendChild(textNode);
+
+let elementoPaiUl = document.getElementById('lista');
+
+elementoPaiUl.appendChild(elementoFilhoLi);
+
+}
+function Removerprimeiroitem() {
+  const list = document.getElementById("lista");
+  list.removeChild(list.lastElementChild);
+}
+
+function Removerultimoitem() {
+  const list = document.getElementById("lista");
+  list.removeChild(list.firstElementChild);
+}
+
+function Removetudo() {
+  const list = document.getElementById("lista");
+  while (list.hasChildNodes()) {
+    list.removeChild(list.firstChild);
+  }
+}
+function Removerespecifico(){
+  let elementoPaiOl = document.getElementById('lista');
+  let itemRemover = document.getElementById('numero-usuario').value;
+  let item = elementoPaiOl.childNodes[itemRemover];
+  elementoPaiOl.removeChild(item);
+}
+
+
+
+</script>
+
+
+
+
+</script>
+</body>
+
+
+
+</html>
