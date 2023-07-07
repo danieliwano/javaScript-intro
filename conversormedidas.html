@@ -42,9 +42,9 @@
     <br>
     <br>
     
-    <a href="index.html">Clique aqui para exercício do numero par</a>
-    <a href="listacompras.html">Clique aqui para lista de compras</a>
-    <a href="media.html">Clique aqui para exercício da média</a>
+    <a href="./index.html">Clique aqui para exercício do numero par</a>
+    <a href="./listadecompras.html">Clique aqui para lista de compras</a>
+    <a href="./media.html">Clique aqui para exercício da média</a>
     
 </div>
 </body>
@@ -109,6 +109,16 @@
             }
         
             outputElement.value = result
+
+            
+           
+            const fromLabel = fromElement.options [fromElement.selectedIndex].text;
+            const toLabel = toElement.options [toElement.selectedIndex].text;
+
+            const message = `${inputElement.value} ${fromElement.value} equivalem a ${result} ${toLabel}`;
+
+            messageElement.textContent = message;
+          
         
         
 
