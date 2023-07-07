@@ -128,3 +128,19 @@ list-style: number;
     font-style: italic;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+.num{
+    background-color: blue;
+    color: white;
+    font-size: 1rem;
+    cursor:pointer;
+    border-radius: 5px;
+    padding: 5px 15px;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    height: 80%;
+    width: 80%;
+
+    
+
+}

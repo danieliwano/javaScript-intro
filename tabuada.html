@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./style.css">
+        <title>Exercicio tabuada</title>
+    
+ </head>
+ <body>
+    Tabuada do número: <input id="num" type="number" > <br />
+    
+    <button class= "btnremove"  onclick="tabuada()">Exibir</button><br />
+    Tabuada: <br />
+    <div id='resposta' style='display:inline'></div>
+
+    <a href="./index.html">Clique aqui para exercício do numero par</a>
+    <a href="./listadecompras.html">Clique aqui para lista de compras</a>
+    <a href="./media.html">Clique aqui para exercício da média</a>
+    <a href="./conversormedidas.html">Clique aqui para exercício de conversor de medidas</a>
+
+
+ </body>
+</html>
+<script>
+function tabuada(){
+  let num = parseInt(document.getElementById("num").value);
+  let resposta = document.getElementById('resposta');
+  let tabuada='';
+
+  for(var count=1; count<=10 ; count++)
+   tabuada += num+" x "+count+" = "+
+               num*count+"<br />";
+  
+  resposta.innerHTML = tabuada;
+}
+</script>
